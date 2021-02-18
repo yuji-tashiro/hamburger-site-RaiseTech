@@ -1,0 +1,27 @@
+.c-typelist {
+   position: absolute;
+   top: 120px;
+   display: flex;
+   flex-direction: column;
+   color: rgb(107, 107, 107);
+   font-size: 1.5vw;
+   font-weight: bold;
+   margin-left: 20px;
+   &__item {
+      font-size: 1.7vw;
+      list-style: none;
+      margin-top: 20px;
+      &__itemlist {
+         display: flex;
+         flex-direction: column;
+         font-size: 1vw;
+         font-weight: bold;
+         margin-top: 20px;
+         margin-left: 20px;
+         &__item {
+            list-style: none;
+            margin: 10px 0;
+         }
+      }
+   }
+}

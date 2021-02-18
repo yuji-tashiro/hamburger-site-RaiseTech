@@ -1,0 +1,40 @@
+.p-global-menu {
+   background-color: rgb(145, 144, 144);
+   height: 1800px;
+   width: 100%;
+   position: relative;
+   @include breakpoint ( pc ) {
+      height: 100%;
+   }
+   &__inner {
+      background-color:rgb(243, 238, 236);
+      width: 80%;
+      height: 1800px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include breakpoint ( tablet ) {
+         width: 50%;
+      } 
+      @include breakpoint ( pc ) {
+         height: 100%;
+         width: 100%;
+         position: initial;
+      }
+      &__logo {
+         display: none;
+         @include breakpoint ( pc ) {
+            display: initial;
+            width: 86px;
+            height: 45px;
+            margin-top: 20px;
+            margin-left: 10px 
+            
+         }
+      }
+      // .c-button--cross//
+      @import "../component/button";
+      // .c-typelist//
+      @import "../component/typelist";
+   }
+}

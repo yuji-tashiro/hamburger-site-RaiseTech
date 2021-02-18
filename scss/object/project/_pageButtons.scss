@@ -1,0 +1,74 @@
+.p-pageButtons {
+   width: 100%;
+   margin-top: 70px;
+   margin-bottom: 20px;
+   padding-right: 20px;
+   padding-left: 20px;
+   font-size: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @include breakpoint ( tablet ) {
+      padding: initial;
+      margin: 0 auto;
+      margin-top: 200px;
+      margin-bottom: 50px;
+      justify-content: center;
+
+   }
+   &__nowPageNumber {
+      display: none;
+      @include breakpoint ( tablet ) {
+         display: initial;
+         margin-right: 20px;
+      }
+   }
+   &__movePrevious {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      &__left {
+         font-size: 50px;
+         margin-right: 30px;
+      }
+      &__mobile {
+         margin-left: 10px;
+         @include breakpoint ( tablet ) {
+            display: none;
+         }
+      }
+   }
+   &__numberBoxes {
+      display: none;
+      @include breakpoint ( tablet ) {
+         display: flex;
+         list-style: none;
+      }
+      &__box {
+         @include breakpoint (tablet) {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+         }
+      }
+   }
+   &__moveNext {
+      display: flex;
+      text-decoration: none;
+      color: black;
+      &__mobile {
+         margin-right: 10px;
+         @include breakpoint ( tablet ) {
+            display: none;
+         }
+      }
+      &__right {
+         font-size: 50px;
+         margin-left: 15px;
+      }
+   }
+}

@@ -1,0 +1,43 @@
+.p-search-form {
+   margin: 0 auto;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   position: relative;
+   @include breakpoint ( pc ) {
+      margin: initial;
+   }
+   .c-search-text {
+      background-color: white;
+      border: 1px rgb(128, 127, 127) solid;
+      border-radius: 6px;
+      height: 46px;
+      width: 230px;
+      @include breakpoint ( tablet ) {
+         width: 360px;
+      }
+   }
+   &::before {
+      content: "";
+      background-image: url(/ham_img/search_glass.png);
+      background-size: contain;
+      display: flex;
+      height: 35px;
+      width: 35px;
+      position: absolute;
+      z-index: 10;
+      top: 5px;
+      left: 5px;
+   }
+   .c-search-button {
+      background-color: rgba(211, 211, 211, 0.5);
+      border: 1px rgb(128, 127, 127) solid;
+      color: rgb(128, 127, 127);
+      border-radius: 6px;
+      height: 46px;
+      width: 78px;
+      margin-left: 10px;
+      @include breakpoint ( tablet ) {
+         width: 120px;
+      }
+   }
+}              

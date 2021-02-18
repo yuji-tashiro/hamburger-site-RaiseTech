@@ -1,0 +1,36 @@
+.l-footer {
+}
+.p-footer {
+   @include breakpoint ( pc ) {
+      grid-area: 2 / 1 / 3 / 3; 
+   }
+   &__inner {
+      background-color: rgb(214, 106, 79);
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      .c-nav {
+         font-size: 1.2rem;
+         display: flex;
+         align-items: center;
+         margin: 0 auto;
+         margin-top: 40px;
+         &__list {
+            list-style: none;
+            display: flex;
+            &__item {
+               margin-right: 5px;
+               color: white;
+            }
+         }
+      }
+      .c-copyright {
+         display: flex;
+         align-items: center;
+         color: white;
+         margin: 0 auto;
+         margin-top: 30px;
+      }
+   }
+} 

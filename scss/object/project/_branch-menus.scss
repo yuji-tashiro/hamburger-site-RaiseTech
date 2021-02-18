@@ -1,0 +1,56 @@
+.p-branch-menus {
+   background-color:gold;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 10% 0;
+   @include breakpoint ( tablet ) {
+      flex-direction: initial;
+      justify-content: space-around;
+   }
+   @include breakpoint ( pc ) {
+   }
+   // .p-branch-menus__menu//-----------------------
+   &__menu {
+      width: 90%;
+      align-items: center;
+      @include breakpoint ( tablet ) {
+         width: calc(50% - 5%);
+         height: 80%
+      }
+      @include breakpoint ( pc ) {
+      }
+      // .c-headline--lv2//----------------------------
+      @import "../component/headline";
+      @import "../utility/padding";
+      // .c-underline-headline--branch-menu//----------
+      @import "../component/underline-headline";
+      .p-contents {
+         width: 100%;
+         margin-top: 220px;
+         &__unit{
+            background-color: rgba(255,255,255,.8);
+            height: 100%;
+            margin: 0 10px 10px 10px ;
+            @import "../component/headline";
+            @import "../component/text";
+            @import "../utility/text";
+         }
+      }
+   }
+   .u-bgi--takeout {
+      background-image: url(/ham_img/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+      background-size: cover;
+   }
+   .u-bgi--eatin {
+      background-image: url(/ham_img/473d814b175bd517b56eb309f2958725.png);
+      background-size: cover;
+      margin-top: 30px;
+      @include breakpoint ( tablet ) {
+         margin-top: initial;
+         margin-left: 20px;
+      }
+   }
+}

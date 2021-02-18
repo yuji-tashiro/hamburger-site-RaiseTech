@@ -1,0 +1,29 @@
+html {
+   font-size: 16px;
+}
+body {
+   overflow-x: hidden;
+   @include breakpoint ( pc ) {
+      position: relative;
+      display: grid;
+      grid-template-columns: 85% 15%;
+      grid-template-rows: 1fr 150px;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+   }
+   .c-wrap--headerMain {
+      @import "../layout/header";
+      @import "../layout/main";
+      @include breakpoint ( pc ) {
+         display: flex;
+         flex-direction: column;
+         grid-area: 1 / 1 / 2 / 2;
+      }
+   }
+   @import "../layout/aside";
+   @import "../layout/footer";
+}
+.is-open {
+   overflow: hidden;
+   position: fixed;
+}

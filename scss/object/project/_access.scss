@@ -1,0 +1,35 @@
+.p-access {
+   background-image: url(/ham_img/access1.png);
+   background-size: cover;
+   background-color: rgba(128,128,128,.9);
+   height: 691px;
+   @include breakpoint ( tablet ) {
+      background-image: url(/ham_img/access2or3.png);
+      background-size: cover;
+      height: 415px;
+   }
+   @include breakpoint ( pc ) {
+      height: 650px;
+   }
+   &__inner {
+      height: 415px;
+      background-color: rgba(0,0,0,.4);
+      @include breakpoint ( tablet ) {
+         height: 100%;
+      }
+      @include breakpoint ( pc ) {
+         width: 950px;
+      } 
+      //c-headline--lv3
+      @import "../component/headline";
+      @import "../utility/color";
+      @import "../utility/padding";
+
+      // c-underline-headline--access
+      @import "../component/underline-headline";
+      
+      //c-text u-text--access
+      @import "../component/text";
+      @import "../utility/text";
+   }
+}

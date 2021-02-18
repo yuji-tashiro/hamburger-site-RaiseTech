@@ -1,0 +1,16 @@
+.p-card {
+   width: 100%;
+   display: flex;
+   margin-top: 40px;
+   > img {
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+   }
+   @import "../component/text";
+}
+.u-bgi--right {
+   > img {
+      order: 2;
+   }
+}

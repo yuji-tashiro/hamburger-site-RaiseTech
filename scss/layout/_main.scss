@@ -1,0 +1,160 @@
+// base.scssにc-wrap--headerMain
+.l-main {
+}
+.p-main {
+   // ===========================================
+   // front-page
+   // ===========================================
+   &--front-page {
+      width: 100%;
+      height: 100%;
+      @import "../object/project/discription";
+      @import "../object/project/branch-menus";
+      @import "../object/project/access";
+   }  
+   // ===========================================
+   // archive & archive_search
+   // ===========================================
+   &--archive {
+      width: 100%;
+      height: 100%;  
+      @import "../object/project/discription";
+      @import "../object/project/menus-catch";
+      .p-menu-unit {
+         margin: 0 auto;
+         margin-top: 60px;
+         background-color: rgb(85, 46, 10);
+         width: 90%;
+         display: flex;
+         flex-direction: column;
+         @include breakpoint ( tablet ) {
+            width: 80%;
+            flex-direction: initial;
+         }
+         > img {
+            @include breakpoint ( tablet ) {
+               width: 50%;
+               object-fit: cover;
+            }
+         }
+         &__content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+            @include breakpoint ( tablet ) {
+               width: 50%;
+            }
+            
+            @import "../object/component/headline";
+            @import "../object/component/text";
+            @import "../object/component/button";
+         }
+      }
+      @import "../object/project/pageButtons";
+   }
+   // ================================================
+   // single & page
+   // ================================================
+   &--single {
+      @import "../object/project/discription";
+      &__contents {
+         padding: 0 20px;
+         @import "../object/component/headline";
+         @import "../object/component/text";
+         .p-blockquote {
+            background-color: rgba(221, 219, 219, 0.233);
+            margin-top: 20px;
+            padding: 30px 10px;
+            @import "../object/component/text";
+         }
+         .c-photo--wide {
+            width: 100%;
+            @include breakpoint ( pc ) {
+               // height: 9%;
+               // width: 100%;
+               display: flex;
+               justify-content: center;
+            }
+            > img {
+               width:100%;
+               margin-top: 40px;
+            }
+         }
+         @import "../object/project/card";
+         .c-photo--middle {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            > img {
+               width: 85%;
+            }
+         }
+         .c-tiles {
+            width: 100%;
+            list-style-type: none;
+            @include breakpoint ( tablet ) {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+            }
+            &__tile {
+               width: 100%;
+               margin-top: 20px;
+               display: flex;
+
+               @include breakpoint ( tablet ) {
+                  width: calc(50% - 1.75%);
+               }
+               @include breakpoint ( pc ) {
+                  width: calc(100% / 3 - 1%);
+               }
+               > img {
+                  width: 100%;
+               }
+            }
+         }
+         .c-list {
+            list-style-type: none;
+            margin-top: 20px;
+            &__item {
+            }
+         }
+         .u-ml--20 {
+            margin-left: 20px;
+         }
+         .u-mt--60 {
+            margin-top: 60px;
+         }
+         pre {
+            background-color: rgba(158, 158, 158, 0.164);
+            padding: 50px 0;
+            line-height: 22px;
+            margin-top: 40px;
+         }
+         .p-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: solid 1px black;
+            margin-top: 40px;
+            tr {
+               height: 80px;
+               border: solid 1px black;
+               td {
+                  border: solid 1px black;
+                  padding-left: 30px;
+               }
+               td:nth-child(1) {
+                  width: 40%;
+               }
+               td:nth-child(2) {
+                  width: 60%;
+               }
+            }
+         }
+         @import "../object/component/button";
+         
+      }
+   }
+}

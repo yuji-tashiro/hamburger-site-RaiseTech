@@ -1,0 +1,48 @@
+@mixin breakpoint( $point ) {
+   @if $point == tablet {
+      @media ( min-width: 830px ){
+         @content ;
+      }
+   }
+   @if $point == pc {
+      @media ( min-width: 1025px ){
+         @content ;
+      }
+   }
+}
+
+// /* 関数宣言の仕方 */
+// @mixin 関数名(引数１, 引数２, ...) {
+//    関数の中身
+//  }
+
+//  /* 関数の呼び出し方 */
+//  @include 関数名(引数１, 引数２, ...);
+
+// $breakpoint-tablet: 1024px; /* 変数宣言 */
+// $breakpoint-mobile: 640px; /* 変数宣言 */
+
+// /* $break-point以下の時に@contentを適用 */
+// @mixin max-screen($break-point) { 
+//   @media screen and (max-width: $break-point) {
+//     @content;
+//   }
+// }
+// /* $break-point以上の時に@contentを適用 */
+// @mixin min-screen($break-point) { 
+//   @media screen and (min-width: $break-point) {
+//     @content;
+//   }
+// }
+// /* $break-point-min以上、$break-point-max以下の時に@contentを適用 */
+// @mixin screen($break-point-min, $break-point-max) { 
+//   @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+//     @content;
+//   }
+// }
+
+// ・ @mixinの中で@content;と記述するとコンテントブロックを渡すことができる
+// ・ これにより1つのmixinで呼び出し側に合わせた処理が可能
+
+// こうすることによって各クラスに対して記述した
+// @include sp {}の部分が@contentの部分に挿入されて行きます。

@@ -1,0 +1,58 @@
+.c-headline {
+   &--lv1 {
+      color: white;
+      font-weight: normal;
+      margin-left: 30px;
+   }
+   &--lv2 {
+      &--front-page {
+         font-size: 2rem;
+         color: white;
+         margin-top: 20px;
+         margin-left: 10px;
+      }
+      &--archive {
+         color: black;
+         padding-top: 10px;
+         padding-left: 10px;
+      }
+      &--single {
+         margin: 30px 0;
+      }
+   }
+   &--lv3 {
+      color: black;
+      font-weight: normal;
+      // ------------------------------------------
+      // p-menu-unit__content
+      // ------------------------------------------
+      &--archive {
+         color: white;
+         font-size: 1.7rem;
+         margin-top: 20px;
+      }
+      &--single {
+         margin-top: 50px;
+      }
+   }
+   &--lv4 {
+      &--archive {
+         color: white;
+         font-size: 1.2rem;
+         margin-top: 20px;
+      }
+      &--single {
+         margin-top: 20px;
+      }
+   }
+   &--lv5 {
+      &--single {
+         margin-top: 20px;
+      }
+   }
+   &--lv6 {
+      &--single {
+         margin-top: 20px;
+      }
+   }
+}
