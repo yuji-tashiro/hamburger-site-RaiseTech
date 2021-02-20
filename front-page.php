@@ -1,36 +1,5 @@
-<!DOCTYPE html>
-<html lang="jp">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/ress@3.0.0/dist/ress.min.css">
-    <link rel="stylesheet" href="scss/style.css">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+<?php get_header(); ?>
 
-<body>
-<div class="c-wrap--headerMain">
-    <header class="l-header p-header">
-        <div class="p-header__inner">
-            <a class="p-header__inner__logo" href="" >
-                <img src="../ham_img/Hamburger.png" alt="Hamburgerロゴ">  
-            </a>
-            
-            <button class="c-button--global-menu">
-                <img src="ham_img/Menu.png" alt="#">
-            </button>
-            <form class="p-search-form u-margin--search-form">
-                <input class="c-search-text" type="search">
-                <input class="c-search-button" type="submit" value="検索">
-            </form>
-        </div>
-    </header>
-    
-    <main class="l-main p-main--front-page">
-        <div class="p-discription--front-page">
-            <h1 class="c-headline--lv1">ダミーサイト</h1>
-        </div>
         <div class="p-branch-menus">
             <article class="p-branch-menus__menu u-bgi--takeout">
                 <h2 class="c-headline--lv2--front-page">Take Out</h2>
@@ -74,7 +43,7 @@
 <aside class="l-aside p-aside">
     <div class="p-global-menu">
         <div class="p-global-menu__inner">                        
-            <img class="p-global-menu__inner__logo" src="../ham_img/Menu.png" alt="menuロゴ">
+            <img class="p-global-menu__inner__logo" src="<?php echo get_template_directory_uri(); ?>/ham_img/Menu.png" alt="menuロゴ">
             <button class="c-button--cross">
                 <span></span>
                 <span></span>
@@ -113,20 +82,4 @@
         </div><!--./p-global-menu__inner-->
     </div><!--./p-global-menu-->
 </aside>
-
-<footer class="l-footer p-footer">
-    <div class="p-footer__inner">
-        <nav class="c-nav">
-            <ul class="c-nav__list">
-                <li class="c-nav__list__item">ショップ情報</li>
-                <li class="c-nav__list__item">|</li>
-                <li class="c-nav__list__item">ヒストリー</li>
-            </ul>
-        </nav>
-        <p class="c-copyright">copyright: RaiseTech</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>
