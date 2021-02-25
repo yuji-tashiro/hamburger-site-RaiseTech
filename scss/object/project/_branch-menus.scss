@@ -12,7 +12,7 @@
    }
    @include breakpoint ( pc ) {
    }
-   // .p-branch-menus__menu//-----------------------
+
    &__menu {
       width: 90%;
       align-items: center;
@@ -41,11 +41,11 @@
       }
    }
    .u-bgi--takeout {
-      background-image: url(/ham_img/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+      background-image: url(../ham_img/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
       background-size: cover;
    }
    .u-bgi--eatin {
-      background-image: url(/ham_img/473d814b175bd517b56eb309f2958725.png);
+      background-image: url(../ham_img/473d814b175bd517b56eb309f2958725.png);
       background-size: cover;
       margin-top: 30px;
       @include breakpoint ( tablet ) {

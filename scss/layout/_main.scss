@@ -20,39 +20,17 @@
       height: 100%;  
       @import "../object/project/discription";
       @import "../object/project/menus-catch";
-      .p-menu-unit {
-         margin: 0 auto;
-         margin-top: 60px;
-         background-color: rgb(85, 46, 10);
-         width: 90%;
+      @import "../object/project/menu-unit";
+      
+      .c-wrap--pagenation {
          display: flex;
-         flex-direction: column;
-         @include breakpoint ( tablet ) {
-            width: 80%;
-            flex-direction: initial;
-         }
-         > img {
-            @include breakpoint ( tablet ) {
-               width: 50%;
-               object-fit: cover;
-            }
-         }
-         &__content {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 0 20px;
-            @include breakpoint ( tablet ) {
-               width: 50%;
-            }
-            
-            @import "../object/component/headline";
-            @import "../object/component/text";
-            @import "../object/component/button";
-         }
+         justify-content: center;
+         align-items: center;
+         margin-top: 70px;
+         margin-bottom: 35px;
+         @import "../object/project/current-total-pagenumber";
+         @import "../object/project/pagenation";
       }
-      @import "../object/project/pageButtons";
    }
    // ================================================
    // single & page
@@ -61,6 +39,96 @@
       @import "../object/project/discription";
       &__contents {
          padding: 0 20px;
+         > h2 {
+            padding: 15px 0;
+         }
+         > h3 {
+            padding: 15px 0;
+         }
+         > h4 {
+            padding: 15px 0;
+         }
+         > h5 {
+            padding: 15px 0;
+         }
+         > h6 {
+            padding: 15px 0;
+         }
+         > p {
+            padding: 15px 0;
+         }
+         .wp-block-quote {
+            background-color: rgba(221, 219, 219, 0.233);
+            padding: 40px 40px;
+            > p {
+               padding: 25px 0;
+            }
+         }
+         .wp-block-gallery {
+            background-color: skyblue;
+            width: 100%;
+            .blocks-gallery-grid {
+               background-color: gold;
+               width: 100%;
+               display: flex;
+               flex-wrap: wrap;
+               .blocks-gallery-item  > figure > img {
+                  height: initial;
+                  @include breakpoint ( tablet ) {
+                     width: calc(50vw - 5vw);
+                     height: initial;
+                  }
+                  @include breakpoint ( pc ) {
+                     width: calc(33vw - 5vw)
+                  }
+               }
+            }
+         }
+         table {
+            margin: 15px 0;
+            border-collapse: collapse;
+            tbody {
+               width: 100%;
+               border: solid 1px black;
+               margin-top: 40px;
+               tr {
+                  height: 80px;
+                  border: solid 1px black;
+                  td {
+                     border: solid 1px black;
+                     padding-left: 30px;
+                  }
+                  td:nth-child(1) {
+                     width: 40%;
+                  }
+                  td:nth-child(2) {
+                     width: 60%;
+                  }
+               }
+            }
+         }
+         .wp-block-buttons {
+            padding: 15px 0;
+            .wp-block-button {
+               width: 100%;
+               > a {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  height: 80px;
+                  @include breakpoint ( pc ) {
+                     width: 430px;
+                     height: 100px;
+                  }
+               }
+            }
+         }
+
+
+
+
+
          @import "../object/component/headline";
          @import "../object/component/text";
          .p-blockquote {

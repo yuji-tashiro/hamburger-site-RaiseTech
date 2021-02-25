@@ -1,0 +1,16 @@
+.p-current-total-pagenumber {
+  display: none;
+  @include breakpoint ( tablet ) {
+    display: initial;
+    > ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      > li {
+        padding: 9px 0;
+        margin-left: 5px;
+        font-weight: bold;
+      }
+    }
+  }
+}

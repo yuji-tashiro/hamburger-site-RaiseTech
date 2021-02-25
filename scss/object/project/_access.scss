@@ -1,10 +1,10 @@
 .p-access {
-   background-image: url(/ham_img/access1.png);
+   background-image: url(../ham_img/access1.png);
    background-size: cover;
    background-color: rgba(128,128,128,.9);
    height: 691px;
    @include breakpoint ( tablet ) {
-      background-image: url(/ham_img/access2or3.png);
+      background-image: url(../ham_img/access2or3.png);
       background-size: cover;
       height: 415px;
    }

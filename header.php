@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang=<?php language_attributes(); ?>><!--/言語設定を自動的に出力します/-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/ress@3.0.0/dist/ress.min.css"> -->
-    <?php wp_enqueue_style('ress','https://unpkg.com/ress@3.0.0/dist/ress.min.css') ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/scss/style.css">
-    <?php wp_enqueue_script( 'jquery' ); ?>
 
     <?php wp_head(); ?><!--/wordpressのお約束/-->
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>><!--/ページごとに自動的にタグが追加される。ページによって装飾を変えたい時などテンプレートに自分でクラスを付けなくてもWordPressが付けてくれるので便利></>/-->
 <?php wp_body_open(); ?>
 
 
@@ -25,13 +23,7 @@
         <button class="c-button--global-menu">
             <img src="<?php echo get_template_directory_uri(); ?>/ham_img/Menu.png" alt="#">
         </button>
-        <form class="p-search-form u-margin--search-form">
-            <input class="c-search-text" type="search">
-            <input class="c-search-button" type="submit" value="検索">
-        </form>
+
+        <?php get_search_form(); ?>
     </div>
 </header>
-<main class="l-main p-main--front-page">
-    <div class="p-discription--front-page">
-        <h1 class="c-headline--lv1"><?php bloginfo( 'name' ); ?></h1>
-    </div>

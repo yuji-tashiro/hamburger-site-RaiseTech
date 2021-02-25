@@ -4,18 +4,18 @@
    // ========================================================
    &--front-page {
       height: 285px;
-      background-image: url(/ham_img/disc_front_mobile.png);
+      background-image: url(../ham_img/disc_front_mobile.png);
       background-size: cover;
       background-position: 50% 50%;
       display: flex;
       align-items: center;
       @include breakpoint ( tablet ) {
-         background-image: url(/ham_img/disc_front_tablet_pc.png);
+         background-image: url(../ham_img/disc_front_tablet_pc.png);
          background-size: cover;
-         background-position: 0 50%;
+         background-position: 50% 50%;
       }
       @include breakpoint ( pc ) {
-         background-image: url(/ham_img/disc_front_tablet_pc.png);
+         background-image: url(../ham_img/disc_front_tablet_pc.png);
          height: 530px;
       }
       @import "../component/headline";
@@ -28,13 +28,13 @@
       font-size: 1.5rem;
       color: white;
       background-color: rgba(0, 0, 0, 0.712);
-      background-image: url(/ham_img/discription_archive_mobile.png);
+      background-image: url(../ham_img/discription_archive_mobile.png);
       background-size: cover;
       display: flex;
       align-items: center;
       width: 100%;
       @include breakpoint ( tablet ) {
-         background-image: url(/ham_img/archive-discription.png);
+         background-image: url(../ham_img/archive-discription.png);
       }
       @include breakpoint ( pc ) {
       }
@@ -47,13 +47,13 @@
       display: flex;
       align-items: center;
       height: 225px;
-      background-image: url(/ham_img/discription_single_tablet_mobile.png);
+      background-image: url(../ham_img/discription_single_tablet_mobile.png);
       background-size: cover;
       @include breakpoint ( tablet ) {
          height: 500px;
       }
       @include breakpoint ( pc ) {
-         background-image: url(/ham_img/discription_single_tablet_mobile.png);
+         background-image: url(../ham_img/discription_single_tablet_mobile.png);
          object-fit: cover
       }
       @import "../component/headline";
@@ -61,6 +61,6 @@
    // ========================================================
 }
 .u-bgi {
-   background-image: url(/ham_img/page_disc.png);
+   background-image: url(../ham_img/page_disc.png);
    background-size: cover;
 }

@@ -11,7 +11,7 @@
 
 <body>
 <div class="c-wrap--headerMain">
-   <header class="l-header">
+   <header class="l-header p-header">
       <div class="p-header__inner">
          <img class="p-header__inner__logo" src="../ham_img/Hamburger.png" alt="Hamburgerロゴ">  
          <button class="c-button--global-menu">
