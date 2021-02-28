@@ -39,6 +39,9 @@
       @import "../object/project/discription";
       &__contents {
          padding: 0 20px;
+         >img {
+            flex: initial;
+         }
          > h2 {
             padding: 15px 0;
          }
@@ -71,15 +74,36 @@
                background-color: gold;
                width: 100%;
                display: flex;
-               flex-wrap: wrap;
-               .blocks-gallery-item  > figure > img {
-                  height: initial;
+               .blocks-gallery-item {
+                  display: flex;
+                  flex-wrap: wrap;
+                  flex-direction: initial;
+                  background-color: silver;
+                  width: 100%;
                   @include breakpoint ( tablet ) {
-                     width: calc(50vw - 5vw);
-                     height: initial;
+                     width: 50%;
+                     padding: 0 1   %;
                   }
                   @include breakpoint ( pc ) {
-                     width: calc(33vw - 5vw)
+                     width: calc(100% / 3);
+                  }
+                  > figure {
+                     width: 100%;
+                     display: initial;
+                     @include breakpoint ( tablet ) {
+                        width: auto;
+                        // width: calc(50vw - 5vw);
+                        // width: 45%;
+                        height: initial;
+                     }
+                     @include breakpoint ( pc ) {
+                        // width: calc(100% / 3);
+                     }
+                     > img {
+                        flex: initial;
+                        display: flex;
+                        width: 100%;
+                     }
                   }
                }
             }
@@ -171,7 +195,6 @@
                width: 100%;
                margin-top: 20px;
                display: flex;
-
                @include breakpoint ( tablet ) {
                   width: calc(50% - 1.75%);
                }

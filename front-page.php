@@ -1,8 +1,5 @@
 <?php get_header(); ?>
-<main class="l-main p-main--front-page">
-    <div class="p-discription--front-page">
-        <h1 class="c-headline--lv1"><?php bloginfo( 'name' ); ?></h1>
-    </div>
+
     
         <div class="p-branch-menus">
             <article class="p-branch-menus__menu u-bgi--takeout">

@@ -6,7 +6,7 @@ body {
    @include breakpoint ( pc ) {
       position: relative;
       display: grid;
-      grid-template-columns: 85% 15%;
+      grid-template-columns: 80% 20%;
       grid-template-rows: 1fr 150px;
       grid-column-gap: 0px;
       grid-row-gap: 0px;

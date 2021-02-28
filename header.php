@@ -27,3 +27,7 @@
         <?php get_search_form(); ?>
     </div>
 </header>
+<main class="l-main p-main--front-page">
+    <div class="p-discription">
+        <h1 class="c-headline--lv1"><?php bloginfo( 'name' ); ?></h1>
+    </div>
