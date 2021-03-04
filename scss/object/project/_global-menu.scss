@@ -34,36 +34,64 @@
       }
       // .c-button--cross//
       @import "../component/button";
-      // .c-typelist//
-      @import "../component/typelist";
 
-      .p-sidebar {
+      > div {
          margin-top: 50px;
          margin-bottom: 50px;
-         .widget {
-            padding-top: 30px;
-            padding-left: 10px;
-            h2 {
-               font-size: 1.7vw;
-            }
-            div {
-               padding-top: 15px;
-               font-size: 1.3vw;
-               .menu {
-                  list-style: none;
-                  .menu-item {
-                     padding: 15px;
-                     a {
-                        text-decoration: none;
-                        color: black;
-                        &:hover {
-                           color: rgba(0, 0, 0, 0.473);
-                        }
-                     }
+         .menu {
+            font-weight: bold;
+            font-size: 2.2vw;
+            list-style: none;
+            .menu-item {
+               padding: 15px;
+               list-style: none;
+               > a {
+                  height: 100%;
+                  text-decoration: none;
+                  color: black;
+                  &:hover {
+                     color: rgba(0, 0, 0, 0.473);
                   }
+               }
+               .sub-menu {
+                  margin-top: 25px;
+                  font-size: 1.5vw;
                }
             }
          }
       }
+
+      // -------------------------------------------------------------
+      // ウィジェット
+      // -------------------------------------------------------------
+      // .p-sidebar {
+      //    margin-top: 50px;
+      //    margin-bottom: 50px;
+      //    .widget {
+      //       padding-top: 30px;
+      //       padding-left: 10px;
+      //       h2 {
+      //          font-size: 1.7vw;
+      //       }
+      //       div {
+      //          padding-top: 15px;
+      //          font-size: 1.3vw;
+      //          .menu {
+      //             list-style: none;
+      //             .menu-item {
+      //                padding: 15px;
+      //                a {
+      //                   text-decoration: none;
+      //                   color: black;
+      //                   &:hover {
+      //                      color: rgba(0, 0, 0, 0.473);
+      //                   }
+      //                }
+      //             }
+      //          }
+      //       }
+      //    }
+      // }
+      // ウィジェット------------------------------------------
    }
 }

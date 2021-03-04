@@ -3,6 +3,7 @@
       position: absolute;
       top: 15px;
       right: 15px;
+      outline: none;
       @include breakpoint ( pc ) {
          display: none;
       }
@@ -12,6 +13,7 @@
       }
    }
    &--cross {
+      outline: none;
       position: absolute;
       top: 20px;
       right: 10px;

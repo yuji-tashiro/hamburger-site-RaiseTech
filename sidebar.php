@@ -7,7 +7,7 @@
                 <span></span>
             </button>
 
-            <div class="p-sidebar">
+            <!-- <div class="p-sidebar">
                 <?php
                     if ( is_active_sidebar( 'global_menu_widget' ) ) :
                         dynamic_sidebar( 'global_menu_widget' );
@@ -17,12 +17,12 @@
                     <h2>No Widget</h2>
                     <p>ウィジットは設定されていません。</p>
                 </div>
-                <?php endif; ?>
+                <?php endif; ?> -->
 
 
-            <!-- <?php wp_nav_menu( array(
+            <?php wp_nav_menu( array(
                 'theme_location' => 'sidebar-menu',
-            ) ); ?> -->
+            ) ); ?>
 
         </div><!--./p-global-menu__inner-->
     </div><!--./p-global-menu-->

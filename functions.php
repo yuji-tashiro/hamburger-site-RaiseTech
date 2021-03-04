@@ -3,6 +3,8 @@
  * <title>タグを出力する。タイトルタグのサポートを許可するという記述
  */
 add_theme_support( 'title-tag' );
+
+
 /**
  * テーマにメニューという項目を機能をサポートすることを許可するという記述
  */
@@ -43,20 +45,43 @@ function register_my_menus() {
   }
   add_action( 'widgets_init', 'hamburger_site_widgets_init' );
 
-
-
-
-
-
 /**
  * アイキャッチ画像を投稿の時に追加できる
  */
 add_theme_support( 'post-thumbnails' );
 
-wp_enqueue_style('ress','https://unpkg.com/ress@3.0.0/dist/ress.min.css');
-wp_enqueue_script( 'jquery' );
+/**
+ * style.css|font-awesome|ressの読み込み
+ */
+function add_my_styles() {
+  wp_enqueue_style(
+    'style',
+    get_template_directory_uri().'/scss/style.css'
+  );
+  wp_enqueue_style(
+    'my-fa4',
+    'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+  );
+  wp_enqueue_style(
+    'ress',
+    'https://unpkg.com/ress@3.0.0/dist/ress.min.css'
+  );
+}
+add_action( 'wp_enqueue_scripts', 'add_my_styles' );
 
-
+/** 
+ * スクリプト(jQuery)読み込み
+ */
+function add_script(){
+  wp_enqueue_script(
+    'my_script',
+    get_template_directory_uri() . '/js/my_script.js',
+    array('jquery'),
+    '',
+    true
+  );
+}
+add_action( 'wp_enqueue_scripts', 'add_script' );
 
 /**
  * ページネーション用の関数

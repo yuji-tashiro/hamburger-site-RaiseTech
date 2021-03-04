@@ -1,14 +1,27 @@
 <?php get_header(); ?>
    <main class="l-main p-main">
       <div class="p-main--single">
-         <div class="p-discription--single">
-            <h1 class="c-headline--lv1 u-margin--headline--lv1"><?php bloginfo( 'name' ); ?></h1>
-         </div>
-         
-         <?php if( have_posts() ) : ?> <!--/1,記事があるかの確認/-->
-         <?php while( have_posts() ) : the_post(); ?><!--/2,表示する投稿データがあれば繰り返し処理開始 3,ループ処理に必要なカウント処理等/-->
+      <!--/1,記事があるかの確認/-->
+      <?php if( have_posts() ) : ?> 
+            <!--/2,表示する投稿データがあれば繰り返し処理開始 3,ループ処理に必要なカウント処理等/-->
+         <?php while( have_posts() ) : the_post(); ?>
             <!--4.「ここに出力したい処理などを記述」-->
             <div id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
+
+            <?php 
+               $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+            ?>
+            <?php if ( has_post_thumbnail() ) : ?>
+               <div class="p-discription--single
+               " style="background-image: url( '<?php echo $url; ?>' );">
+                  <div class="c-layer">
+                     <!-- 記事のタイトルを表示 -->
+                     <h1 class="c-headline--lv1--single"><?php the_title(); ?></h1>
+                  </div>
+               </div>
+            <?php else : ?>
+               <h1 class="c-headline--lv1--single u-title"><?php the_title(); ?></h1>
+            <?php endif; ?>
                <div class="p-main--single__contents">
                   <?php the_content(); ?>
                </div>

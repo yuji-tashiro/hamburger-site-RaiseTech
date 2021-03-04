@@ -10,10 +10,51 @@
       height: 100%;
       @import "../object/project/discription";
       @import "../object/project/branch-menus";
-      @import "../object/project/access";
+      .p-map {
+         height: 700px;
+         position: relative;
+         @include breakpoint ( tablet ) {
+            height: 415px;
+         }
+         @include breakpoint ( pc ) {
+            height: 650px;
+         }
+         iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+         }
+         &__content {
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 0, 0.575);
+            position: absolute;
+            z-index: 10;
+            padding: 0 20px;
+            @include breakpoint ( tablet ) {
+               width: 100%;
+            }
+            @include breakpoint ( tablet ) {
+               width: 60%;
+            }
+            > h3 {
+               color: white;
+               margin-top: 30px;
+            }
+            .c-underline {
+               width: 75px;
+               height: 2px;
+               background-color: white;
+               margin: 20px 0;
+            }
+            > p {
+               color: white;
+            }
+         }
+      }
    }  
    // ===========================================
-   // archive & archive_search
+   // archive & search
    // ===========================================
    &--archive {
       width: 100%;
@@ -21,13 +62,24 @@
       @import "../object/project/discription";
       @import "../object/project/menus-catch";
       @import "../object/project/menu-unit";
+      > p {//検索結果なし
+         margin: 0 auto;
+         padding: 50px 0;
+         width: 80%;
+         font-weight: bold;
+         font-size: 1.7rem;
+      }
       
       .c-wrap--pagenation {
          display: flex;
-         justify-content: center;
+         justify-content: space-between;
          align-items: center;
          margin-top: 70px;
          margin-bottom: 35px;
+         padding: 0 20px;
+         @include breakpoint ( tablet ) {
+            justify-content: center;
+         }
          @import "../object/project/current-total-pagenumber";
          @import "../object/project/pagenation";
       }
@@ -37,6 +89,13 @@
    // ================================================
    &--single {
       @import "../object/project/discription";
+      @import "../object/component/headline";
+      .u-title {
+         color: black;
+         padding: initial;
+         padding: 20px;
+
+      }
       &__contents {
          padding: 0 20px;
          >img {
@@ -67,22 +126,31 @@
                padding: 25px 0;
             }
          }
+         .wp-block-image {
+            > img {
+               width: 100%;
+               height: auto;
+            }
+         }
+
+         .wp-block-media-text__content {
+            padding-top: 20px;
+            padding-bottom: 20px;
+         }
+         
          .wp-block-gallery {
-            background-color: skyblue;
             width: 100%;
             .blocks-gallery-grid {
-               background-color: gold;
                width: 100%;
                display: flex;
                .blocks-gallery-item {
                   display: flex;
                   flex-wrap: wrap;
                   flex-direction: initial;
-                  background-color: silver;
                   width: 100%;
                   @include breakpoint ( tablet ) {
                      width: 50%;
-                     padding: 0 1   %;
+                     padding: 0 1%;
                   }
                   @include breakpoint ( pc ) {
                      width: calc(100% / 3);
@@ -108,6 +176,43 @@
                }
             }
          }
+
+         ol {
+            padding: 30px 0;
+            padding-left: 10px;
+            li {
+               
+               ol {
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  padding-left: 15px;
+                  li{
+
+                  }
+               }
+            }
+         }
+
+         ul {
+            padding: 30px 0;
+            padding-left: 10px;
+            list-style: none;
+            li {
+               ul {
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  padding-left: 15px;
+                  li {
+
+                  }
+               }
+            }
+         }
+         .wp-block-preformatted {
+            background-color: rgba(189, 186, 186, 0.452);
+            padding: 30px 0;
+         }
+
          table {
             margin: 15px 0;
             border-collapse: collapse;
@@ -148,104 +253,7 @@
                }
             }
          }
-
-
-
-
-
-         @import "../object/component/headline";
-         @import "../object/component/text";
-         .p-blockquote {
-            background-color: rgba(221, 219, 219, 0.233);
-            margin-top: 20px;
-            padding: 30px 10px;
-            @import "../object/component/text";
-         }
-         .c-photo--wide {
-            width: 100%;
-            @include breakpoint ( pc ) {
-               // height: 9%;
-               // width: 100%;
-               display: flex;
-               justify-content: center;
-            }
-            > img {
-               width:100%;
-               margin-top: 40px;
-            }
-         }
-         @import "../object/project/card";
-         .c-photo--middle {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            > img {
-               width: 85%;
-            }
-         }
-         .c-tiles {
-            width: 100%;
-            list-style-type: none;
-            @include breakpoint ( tablet ) {
-               display: flex;
-               flex-wrap: wrap;
-               justify-content: space-between;
-            }
-            &__tile {
-               width: 100%;
-               margin-top: 20px;
-               display: flex;
-               @include breakpoint ( tablet ) {
-                  width: calc(50% - 1.75%);
-               }
-               @include breakpoint ( pc ) {
-                  width: calc(100% / 3 - 1%);
-               }
-               > img {
-                  width: 100%;
-               }
-            }
-         }
-         .c-list {
-            list-style-type: none;
-            margin-top: 20px;
-            &__item {
-            }
-         }
-         .u-ml--20 {
-            margin-left: 20px;
-         }
-         .u-mt--60 {
-            margin-top: 60px;
-         }
-         pre {
-            background-color: rgba(158, 158, 158, 0.164);
-            padding: 50px 0;
-            line-height: 22px;
-            margin-top: 40px;
-         }
-         .p-table {
-            width: 100%;
-            border-collapse: collapse;
-            border: solid 1px black;
-            margin-top: 40px;
-            tr {
-               height: 80px;
-               border: solid 1px black;
-               td {
-                  border: solid 1px black;
-                  padding-left: 30px;
-               }
-               td:nth-child(1) {
-                  width: 40%;
-               }
-               td:nth-child(2) {
-                  width: 60%;
-               }
-            }
-         }
          @import "../object/component/button";
-         
       }
    }
 }

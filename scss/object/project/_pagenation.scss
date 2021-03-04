@@ -1,6 +1,8 @@
 .p-pagenation {
   width: 100%;
-  padding: 0 10%;
+  @include breakpoint ( tablet ) {
+    width: auto;
+  }
   .page-numbers {
     display: flex;
     justify-content: space-between;
@@ -9,8 +11,10 @@
       justify-content: center;
     }
     > li {
-      margin-left: 20px;
       list-style-type: none;
+      @include breakpoint ( tablet ) {
+        margin-left: 20px;
+      }
       .dots {
         display: none;
         @include breakpoint ( tablet ) {

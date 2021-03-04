@@ -47,16 +47,23 @@
       display: flex;
       align-items: center;
       height: 225px;
-      background-image: url(../ham_img/discription_single_tablet_mobile.png);
+      //phpよりbackground-imageが挿入されている
       background-size: cover;
+      background-position: 50% 50%;
       @include breakpoint ( tablet ) {
          height: 500px;
+         object-fit: cover;
       }
       @include breakpoint ( pc ) {
-         background-image: url(../ham_img/discription_single_tablet_mobile.png);
-         object-fit: cover
       }
-      @import "../component/headline";
+      .c-layer {
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.404);
+         display: flex;
+         align-items: center;
+         @import "../component/headline";
+      }
    }
    // ========================================================
 }

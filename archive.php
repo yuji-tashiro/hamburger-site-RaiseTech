@@ -2,8 +2,9 @@
 
    <main class="l-main p-main--archive">
       <div class="p-discription--archive">
-         <h1 class="c-headline--lv1 u-margin--headline--lv1">Menu:</h1>
-         <p class="c-text">チーズバーガー</p>
+
+      <?php $cats = get_the_category(); ?>
+         <h1 class="c-headline--lv1 u-margin--headline--lv1">Menu:<?php echo $cats[0] -> cat_name; ?></h1>
       </div>
    
       <div class="p-menus-catch">
@@ -15,7 +16,25 @@
          <?php while( have_posts() ) : the_post(); ?><!--/2,表示する投稿データがあれば繰り返し処理開始 3,ループ処理に必要なカウント処理等/-->
             <!--4.「ここに出力したい処理などを記述」-->
             <div id="post-<?php the_ID(); ?>" <?php post_class('p-menu-unit'); ?>>
-               <?php the_post_thumbnail(); ?>
+
+               <?php if ( has_post_thumbnail() ) : ?>
+                  <?php 
+                     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+                  ?>
+                  <a class="c-thumbnail" style="background-image: url( '<?php echo $url; ?>' );">
+                  </a>
+               <?php endif; ?>
+
+
+
+
+
+               <!-- <a class="c-thumbnail" href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail('medium'); ?>
+               </a> -->
+
+
+               
                <div class="p-menu-unit__content">
                   <h2 class="c-headline--lv2--menu-unit"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                   <?php the_excerpt(); ?>
@@ -38,14 +57,6 @@
          </div>
          <?php if( function_exists("the_pagenation") ) the_pagenation(); ?>
       </div>
-
-
-
-
-      
-
-      
-
    </main>
 </div><!--/c-wrap--headerMain/-->
 

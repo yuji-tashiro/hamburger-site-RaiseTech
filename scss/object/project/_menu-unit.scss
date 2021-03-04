@@ -9,10 +9,13 @@
     width: 80%;
     flex-direction: initial;
   }
-  > img {
+  .c-thumbnail {
+    height: 250px;
+    background-size: cover;
+    background-position: 50% 50%;
     @include breakpoint ( tablet ) {
-        width: 50%;
-        object-fit: cover;
+      height: initial;
+      width: 50%;
     }
   }
   &__content {
@@ -25,10 +28,6 @@
         width: 50%;
     }
     @import "../component/headline";
-    // > h3 {
-    //     color: white;
-    //     margin-top: 10px;
-    // }
     > p {
         color: white;
         margin-top: 10px;
