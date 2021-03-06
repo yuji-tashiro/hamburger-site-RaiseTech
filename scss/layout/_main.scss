@@ -101,6 +101,10 @@
          >img {
             flex: initial;
          }
+         .sticky {
+            padding: 20px;
+            background: #f3f3f3;
+         }
          > h2 {
             padding: 15px 0;
          }
@@ -137,7 +141,15 @@
             padding-top: 20px;
             padding-bottom: 20px;
          }
-         
+         .wp-caption {
+            font-size: 1.3rem
+         }
+         .wp-caption-text {
+            margin-top: -20px;
+         }
+         .gallery-caption {
+            font-size: 90%;
+         }
          .wp-block-gallery {
             width: 100%;
             .blocks-gallery-grid {
@@ -253,7 +265,22 @@
                }
             }
          }
+         .alignright {
+            display: block;
+            margin-left: auto;
+         }
+         .alignleft {
+            display: block;
+            margin-right: auto;
+         }
+         .aligncenter {
+            display: block;
+            margin: 0 auto;
+         }
          @import "../object/component/button";
+         .bypostauthor {
+            background-color: silver;
+         }
       }
    }
 }

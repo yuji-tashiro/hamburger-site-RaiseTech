@@ -16,29 +16,23 @@
          align-items: center;
          margin: 0 auto;
          margin-top: 40px;
-         > .menu {
-            list-style: none;
-            display: flex;
-            color: white;
-            > .menu-item {
-               margin-right: 5px;
-               
-               text-decoration: none;
-               > a {
-                  color: white;
+         .menu-footer-menu-container {
+            > .menu {
+               list-style: none;
+               display: flex;
+               color: white;
+               > .menu-item {
+                  margin-right: 5px;
                   text-decoration: none;
+                  > a {
+                     color: white;
+                     text-decoration: none;
+                  }
                }
             }
-            // &-item {
-            //    margin-right: 5px;
-            //    text-decoration: none;
-            //    > a {
-            //       color: white;
-            //       text-decoration: none;
-            //    }
-            // }
          }
-      }
+
+         }
       .c-copyright {
          display: flex;
          align-items: center;
