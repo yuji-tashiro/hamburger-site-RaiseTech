@@ -8,6 +8,7 @@
       margin: initial;
    }
    &__keyword {
+      outline: none;
       background-color: white;
       border: 1px rgb(128, 127, 127) solid;
       border-radius: 6px;
@@ -34,6 +35,7 @@
    //    cursor: text;
    // }
    &__submit {
+      outline: none;
       background-color: rgba(211, 211, 211, 0.5);
       border: 1px rgb(128, 127, 127) solid;
       color: rgb(128, 127, 127);

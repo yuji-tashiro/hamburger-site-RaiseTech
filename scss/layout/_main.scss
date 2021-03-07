@@ -131,9 +131,21 @@
             }
          }
          .wp-block-image {
+            padding: 20px;
+            margin: initial;
             > img {
                width: 100%;
                height: auto;
+            }
+            .aligncenter {
+               width: auto;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               > img {
+                  display: flex;
+                  width: auto;
+               }
             }
          }
          .alignnone {
@@ -147,6 +159,12 @@
          .wp-block-media-text__content {
             padding-top: 20px;
             padding-bottom: 20px;
+         }
+         .wp-block-media-text__media {
+            > img {
+               width: 100%;
+               height: auto;
+            }
          }
          .wp-caption {
             width: 100%;

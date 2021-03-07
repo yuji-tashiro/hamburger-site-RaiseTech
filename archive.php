@@ -19,19 +19,9 @@
                   <?php 
                      $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                   ?>
-                  <a class="c-thumbnail" style="background-image: url( '<?php echo $url; ?>' );">
+                  <a class="c-thumbnail"  href="<?php the_permalink(); ?>" style="background-image: url( '<?php echo $url; ?>' );">
                   </a>
                <?php endif; ?>
-
-
-
-
-
-               <!-- <a class="c-thumbnail" href="<?php the_permalink(); ?>">
-                  <?php the_post_thumbnail('medium'); ?>
-               </a> -->
-
-
                
                <div class="p-menu-unit__content">
                   <h2 class="c-headline--lv2--menu-unit"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

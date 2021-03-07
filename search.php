@@ -2,17 +2,8 @@
 
    <main class="l-main p-main--archive">
       <div class="p-discription--archive">
-         <h1 class="c-headline--lv1 u-margin--headline--lv1">Search:<?php echo $cats[0] -> name; ?><?php the_search_query(); ?></h1>
+         <h1 class="c-headline--lv1 u-margin--headline--lv1">Search:<?php the_search_query(); ?></h1>
       </div>
-   
-      <div class="p-menus-catch">
-         <h2 class="c-headline--lv2--menu-catch">小見出しが入ります</h2>
-         <p class="c-text--menus-catch">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      </div>
-
-
-
-
 
       <?php if ( empty( get_search_query() ) ) : ?>
          <!--検索キーワードがないとき-->
