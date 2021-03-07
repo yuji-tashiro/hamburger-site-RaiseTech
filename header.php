@@ -14,12 +14,12 @@
 <div class="c-wrap--headerMain">
 <header class="l-header p-header">
     <div class="p-header__inner">
-        <a class="p-header__inner__logo" href="<?php echo home_url(); ?>"><!--/トップページのurlを返す/-->
-            <img src="<?php echo get_template_directory_uri(); ?>/ham_img/Hamburger.png" alt="Hamburgerロゴ">  
+        <a class="p-header__inner__logo" href="<?php echo esc_url( home_url() ); ?>"><!--/トップページのurlを返す/-->
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ham_img/Hamburger.png" alt="Hamburgerロゴ">  
         </a>
         
         <button class="c-button--global-menu">
-            <img src="<?php echo get_template_directory_uri(); ?>/ham_img/Menu.png" alt="#">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ham_img/Menu.png" alt="#">
         </button>
 
         <?php get_search_form(); ?>

@@ -21,18 +21,24 @@
       }
       @include breakpoint ( pc ) {
       }
-      // .c-headline--lv2//----------------------------
-      @import "../component/headline";
-      @import "../utility/padding";
+      > a {
+         text-decoration: none;
+         // .c-headline--lv2//----------------------------
+         @import "../component/headline";
+         @import "../utility/padding";
+         // ----------------------------------------------
+      }
       // .c-underline-headline--branch-menu//----------
       @import "../component/underline-headline";
+      // ---------------------------------------------
       .p-contents {
          width: 100%;
          margin-top: 220px;
          &__unit{
             background-color: rgba(255,255,255,.8);
             height: 100%;
-            margin: 0 10px 10px 10px ;
+            margin: 10px;
+            padding: 10px;
             @import "../component/headline";
             @import "../component/text";
             @import "../utility/text";

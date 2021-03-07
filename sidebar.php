@@ -1,7 +1,7 @@
 <aside class="l-aside p-aside">
     <div class="p-global-menu">
         <div class="p-global-menu__inner">                        
-            <img class="p-global-menu__inner__logo" src="<?php echo get_template_directory_uri(); ?>/ham_img/Menu.png" alt="menuロゴ">
+            <img class="p-global-menu__inner__logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ham_img/Menu.png" alt="menuロゴ">
             <button class="c-button--cross">
                 <span></span>
                 <span></span>

@@ -1,4 +1,7 @@
 <?php 
+if ( ! isset( $content_width ) ) {
+  $content_width = 820;
+}
 /**
  * <title>タグを出力する。タイトルタグのサポートを許可するという記述
  */
@@ -8,7 +11,7 @@ add_theme_support( 'title-tag' );
 /**
  * テーマにメニューという項目を機能をサポートすることを許可するという記述
  */
-add_theme_support( 'menus' );
+// add_theme_support( 'menus' );
 
 function register_my_menus() { 
   register_nav_menus( array( //複数のナビゲーションメニューを登録する関数

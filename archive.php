@@ -2,9 +2,7 @@
 
    <main class="l-main p-main--archive">
       <div class="p-discription--archive">
-
-      <?php $cats = get_the_category(); ?>
-         <h1 class="c-headline--lv1 u-margin--headline--lv1">Menu:<?php echo $cats[0] -> cat_name; ?></h1>
+         <h1 class="c-headline--lv1 u-margin--headline--lv1">Menu:<?php single_term_title(); ?></h1>
       </div>
    
       <div class="p-menus-catch">

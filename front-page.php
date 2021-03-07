@@ -6,7 +6,7 @@
         </div>
         <div class="p-branch-menus">
             <article class="p-branch-menus__menu u-bgi--takeout">
-            <a href="<?php echo home_url('/tag/takeout'); ?>">
+            <a href="<?php echo esc_url( home_url('/tag/takeout') ); ?>">
                 <h2 class="c-headline--lv2--front-page">Take Out</h2>
             </a>
                 <div class="c-underline-headline--branch-menu"></div>
@@ -22,7 +22,7 @@
                 </div>
             </article>
             <article class="p-branch-menus__menu u-bgi--eatin">
-            <a href="<?php echo home_url('/tag/eatin'); ?>">
+            <a href="<?php echo esc_url( home_url('/tag/eatin') ); ?>">
                 <h2 class="c-headline--lv2--front-page">Eat In</h2>
             </a>
                 <div class="c-underline-headline--branch-menu"></div>
