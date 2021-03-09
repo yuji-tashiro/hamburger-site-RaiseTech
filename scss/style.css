@@ -2840,9 +2840,15 @@ body .p-aside .p-global-menu__inner > div {
 }
 
 body .p-aside .p-global-menu__inner > div .menu {
+  font-size: 1.8rem;
   font-weight: bold;
-  font-size: 2.2vw;
   list-style: none;
+}
+
+@media (min-width: 1025px) {
+  body .p-aside .p-global-menu__inner > div .menu {
+    font-size: 2.2vw;
+  }
 }
 
 body .p-aside .p-global-menu__inner > div .menu .menu-item {
@@ -2861,8 +2867,14 @@ body .p-aside .p-global-menu__inner > div .menu .menu-item > a:hover {
 }
 
 body .p-aside .p-global-menu__inner > div .menu .menu-item .sub-menu {
+  font-size: 1.2rem;
   margin-top: 25px;
-  font-size: 1.5vw;
+}
+
+@media (min-width: 1025px) {
+  body .p-aside .p-global-menu__inner > div .menu .menu-item .sub-menu {
+    font-size: 1.5vw;
+  }
 }
 
 body .p-aside::-webkit-scrollbar {
@@ -2925,6 +2937,10 @@ body .p-footer__inner__nav .menu-footer-menu-container > .menu > .menu-item {
 body .p-footer__inner__nav .menu-footer-menu-container > .menu > .menu-item > a {
   color: white;
   text-decoration: none;
+}
+
+body .p-footer__inner__nav .menu-footer-menu-container > .menu > .menu-item > a:hover {
+  color: rgba(255, 255, 255, 0.452);
 }
 
 body .p-footer__inner .c-copyright {
@@ -5747,9 +5763,15 @@ body .p-footer__inner .c-copyright {
 }
 
 .p-aside .p-global-menu__inner > div .menu {
+  font-size: 1.8rem;
   font-weight: bold;
-  font-size: 2.2vw;
   list-style: none;
+}
+
+@media (min-width: 1025px) {
+  .p-aside .p-global-menu__inner > div .menu {
+    font-size: 2.2vw;
+  }
 }
 
 .p-aside .p-global-menu__inner > div .menu .menu-item {
@@ -5768,8 +5790,14 @@ body .p-footer__inner .c-copyright {
 }
 
 .p-aside .p-global-menu__inner > div .menu .menu-item .sub-menu {
+  font-size: 1.2rem;
   margin-top: 25px;
-  font-size: 1.5vw;
+}
+
+@media (min-width: 1025px) {
+  .p-aside .p-global-menu__inner > div .menu .menu-item .sub-menu {
+    font-size: 1.5vw;
+  }
 }
 
 .p-aside::-webkit-scrollbar {
@@ -5832,6 +5860,10 @@ body .p-footer__inner .c-copyright {
 .p-footer__inner__nav .menu-footer-menu-container > .menu > .menu-item > a {
   color: white;
   text-decoration: none;
+}
+
+.p-footer__inner__nav .menu-footer-menu-container > .menu > .menu-item > a:hover {
+  color: rgba(255, 255, 255, 0.452);
 }
 
 .p-footer__inner .c-copyright {
@@ -6728,9 +6760,15 @@ body .p-footer__inner .c-copyright {
 }
 
 .p-global-menu__inner > div .menu {
+  font-size: 1.8rem;
   font-weight: bold;
-  font-size: 2.2vw;
   list-style: none;
+}
+
+@media (min-width: 1025px) {
+  .p-global-menu__inner > div .menu {
+    font-size: 2.2vw;
+  }
 }
 
 .p-global-menu__inner > div .menu .menu-item {
@@ -6749,8 +6787,14 @@ body .p-footer__inner .c-copyright {
 }
 
 .p-global-menu__inner > div .menu .menu-item .sub-menu {
+  font-size: 1.2rem;
   margin-top: 25px;
-  font-size: 1.5vw;
+}
+
+@media (min-width: 1025px) {
+  .p-global-menu__inner > div .menu .menu-item .sub-menu {
+    font-size: 1.5vw;
+  }
 }
 
 .c-button--global-menu {
